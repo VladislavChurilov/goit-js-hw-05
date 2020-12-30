@@ -3,6 +3,9 @@
 // Напиши класс Car с указанными свойствами и методами.
 
 class Car {
+  static getSpecs(car){
+    console.log(maxSpeed, speed, isOn, distance, price);
+  } 
   /*
    * Добавь статический метод `getSpecs(car)`,
    * который принимает объект-машину как параметр и выводит
@@ -51,12 +54,18 @@ class Car {
    * при условии что результирующая скорость не меньше нуля
    */
   decelerate(value) {}
-
+    
+ 
   /*
    * Добавляет в поле distance киллометраж (hours * speed),
    * но только в том случае если машина заведена!
    */
-  drive(hours) {}
+  drive(hours) {
+    if (turnOn (true)){
+      this.distance.push(hours * speed);
+    }
+  }
+  
 }
 
 const mustang = new Car({ maxSpeed: 200, price: 2000 });
