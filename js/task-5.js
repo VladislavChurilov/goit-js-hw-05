@@ -32,17 +32,17 @@ class Car {
     return;
   }  
 
-  accelerate(value) {    
-this.speed += value;
-if(this.speed <= this.maxSpeed){
+  accelerate(value) { 
+if(this.speed + value  <= this.maxSpeed){
+  this.speed += value;  
   return console.log (`Your speed = ${this.speed}`);
   } 
   console.log( 'скорость выше максимальной');
-} 
-  
-  decelerate(value) {
+}   
+
+  decelerate(value) {    
+  if(this.speed - value >= 0){
     this.speed -= value;
-  if(this.speed >= 0){
     return console.log (`Your speed = ${this.speed}`);
   } 
   console.log( 'скорость не может быть меньше нуля');  

@@ -1,25 +1,29 @@
-
 class Storage {
    constructor(storage) {
-       this.storage = storage
+       this.storage = storage;
    }
    getItems () {
-       console.log(storage)
+      //  console.log(storage)
+      return storage;
    }
    addItem(item){    
        this.storage.push(item);
-    //    return storage;
-        console.table (storage);
+      //  return storage;
+       return storage;
    }
+   
    removeItem(item){
-    const itemToRemove = item;
+    const itemToRemove = item;    
     const index = this.storage.indexOf(itemToRemove);
-    this.storage.splice(index, 1);
-    console.table (storage);
-   }   
+    if(index != -1){          
+         this.storage.splice(index, 1);
+        }    
+    // console.table (storage); 
+    return storage;   
+   }
+   
+    
 }
-
-
 
 const storage = new Storage([
     'Нанитоиды',
@@ -29,10 +33,10 @@ const storage = new Storage([
   ]);
 //  console.log(storage); 
   const items = storage.getItems();
-//   console.table(items); // [ "Нанитоиды", "Пролонгер", "Железные жупи", "Антигравитатор" ]
+  console.table(items); // [ "Нанитоиды", "Пролонгер", "Железные жупи", "Антигравитатор" ]
   
   storage.addItem('Дроид');
-//   console.table(storage.items); // [ "Нанитоиды", "Пролонгер", "Железные жупи", "Антигравитатор", "Дроид" ]
+  console.table(items); // [ "Нанитоиды", "Пролонгер", "Железные жупи", "Антигравитатор", "Дроид" ]
   
   storage.removeItem('Пролонгер');
-//   console.table(storage.items); // [ "Нанитоиды", "Железные жупи", "Антигравитатор", "Дроид" ]
+  console.table(items); // [ "Нанитоиды", "Железные жупи", "Антигравитатор", "Дроид" ]

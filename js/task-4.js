@@ -11,11 +11,11 @@ class StringBuilder {
         // console.log(this._value);        
     };
     prepend(str){
-        this._value = str + this._value;        
+        this._value = str + this.value;        
         // console.log(this._value);        
     };
     pad(str){        
-        this._value = str + this._value + str;
+        this._value = str + this.value + str;
         // console.log(this._value );
     }
     
